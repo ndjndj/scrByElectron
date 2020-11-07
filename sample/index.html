@@ -6,6 +6,34 @@
     <title>scr</title>
 </head>
 <body>
-    
+    <style>
+        body {
+            background-color: #CCCCCC;
+        }
+
+    </style>
+    <script>
+        function setClock(){
+            let elClock = document.getElementById("clock");
+            
+            let nowDate = new Date();
+            let hour = zeroPadding(nowDate.getHours(), 2);
+            let minutes = zeroPadding(nowDate.getHours(), 2);
+            let seconds = zeroPadding(nowDate.getSeconds(), 2);
+
+            elClock.innerHTML = hour + ":" + minutes + ":" + seconds;
+
+        }
+        function zeroPadding(targetNum, paddingNum) {
+            let zero = "0";
+            let joinedZero = zero.repeat(paddingNum) + String(targetNum);
+            return joinedZero.slice(-paddingNum);
+        }
+        let timer = setInterval("setClock()", 1000);
+    </script>
+    <div class="clock-wrapper">
+        <p id="clock"></p>
+        
+    </div>
 </body>
 </html>
