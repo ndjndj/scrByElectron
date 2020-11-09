@@ -1,0 +1,33 @@
+{
+  "name": "electron-test",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "license": "MIT",
+  "scripts": {
+    "build:windows": "node_modules/.bin/electron-builder --win --x64",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "productName": "electron-test",
+    "appId": "electron-test",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "build/ison.ico",
+      "src/main.js",
+      "src",
+      "package.json",
+      "yarn.lock"
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": "nsis"
+    }
+  },
+  "devDependencies": {
+    "electron-builder": "^22.9.1",
+    "electron": "^10.1.5"
+  }
+}
