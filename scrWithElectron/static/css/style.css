@@ -27,7 +27,15 @@ body {
     background-color: #aaffaa;
     
 }
-
+#par {
+    font-family: "Share Tech Mono", monospace;
+    text-align: center;
+    font-size: 400%;
+    text-shadow: 0 0 20px #aaffaa, 0 0 20px rgba(10, 175, 230, 0);
+    color: #e1ffda;
+    height: 20%;
+    margin-bottom: 10%;
+}
 .clock-wrapper {
     text-align: center;
     
