@@ -30,7 +30,9 @@ function calcParcentage(){
 }
 
 function changePrgBarWidth(parcent){
+    let par = document.getElementById("par");
     let prgBar = document.getElementById("prg-bar");
+    par.innerText = String(calcDecimal(parcent, 4)) + "%";
     prgBar.style.width = String(parcent) + "%";
 }
 
